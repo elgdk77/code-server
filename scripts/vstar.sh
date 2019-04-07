@@ -12,7 +12,14 @@ mkdir -p $dir
 
 cd $dir
 git clone https://github.com/microsoft/vscode --branch $branch --single-branch --depth=1
-cd vscode
+cd vscode/extensions
+
+git clone https://github.com/misolori/min-theme.git
+git clone https://github.com/VSChina/vscode-ansible.git
+git clone https://github.com/dhoeric/vscode-ansible-vault.git
+git clone https://github.com/Microsoft/vscode-python.git
+
+cd ..
 
 yarn
 
